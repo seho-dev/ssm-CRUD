@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 类型别名是为 Java 类型设置一个短的名字。它只和 XML 配置有关，存在的意义仅在于用来减少类完全限定名的冗余 -->
+	<typeAliases>
+		<typeAlias alias="User" type="com.ssmall.pojo.Userpojo" />
+	</typeAliases>
+
+	<!-- 配置分页插件 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<!-- 设置数据库类型Oracle，MySQL，MarinDBName，SQLite，PostareSQL六种数据库 -->
+			<property name="dialect" value="mysql" />
+		</plugin>
+	</plugins>
+</configuration>
